@@ -9,8 +9,8 @@ import common
 def main():
     common.log("Creating local and domain user accounts using net.exe")
     commands = [ 
-        'net.exe user macgyver $w!$$@rmy11 /add /fullname:"Angus Macgyver"',
-        'net.exe user macgyver $w!$$@rmy11 /add /fullname:"Angus Macgyver" /domain',
+        'net.exe user macgyver $W!$$@rmy11 /add /fullname:"Angus Macgyver"',
+        'net.exe user macgyver $W!$$@rmy11 /add /fullname:"Angus Macgyver" /domain',
         'net.exe group  Administrators macgyver /add',
         'net.exe group  "Domain Admins"  macgyver  /add  /domain',
         'net.exe localgroup Administrators macgyver /add',

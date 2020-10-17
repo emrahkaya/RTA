@@ -1,6 +1,6 @@
 # Name: Persistent Scripts
 # RTA: persistent_scripts.py
-# ATT&CK: T1064 (Scripting), T1086 (PowerShell)
+# ATT&CK: T1064 (Scripting)
 
 import common
 import os

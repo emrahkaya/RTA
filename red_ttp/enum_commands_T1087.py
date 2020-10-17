@@ -1,6 +1,6 @@
 # Name: Common Enumeration Commands
-# RTA: enum_commands.py
-# ATT&CK: T1007, T1016, T1018, T1035, T1049, T1057, T1063, T1069, T1077, T1082, T1087, T1124, T1135
+# RTA: enum_commands_T1087.py
+# ATT&CK: T1087
 # Description: Executes a list of administration tools commonly used by attackers for enumeration.
 
 import argparse
@@ -9,35 +9,17 @@ import random
 
 
 long_commands = [
-    "gpresult.exe /z",  # group policy view
-    "systeminfo.exe"
 ]
 
 commands = [
-    "ipconfig /all",
+    "net localgroup",
     "net localgroup administrators",
     "net user",
     "net user administrator",
     "net user /domain"
-    "tasklist",
-    "net view",
-    "net view /domain",
-    "net view \\\\%s" % common.LOCAL_IP,
-    "netstat -nao",
-    "whoami",
-    "hostname",
-    "net start",
-    "tasklist /svc",
-    "net time \\\\%s" % common.LOCAL_IP,
-    "net use",
-    "net view",
-    "net start",
-    "net accounts",
-    "net localgroup",
     "net group",
     "net group \"Domain Admins\" /domain",
-    "net share",
-    "net config workstation",
+    "net group \"Exchange Trusted Subsystem\" /domain"
 ] + long_commands
 
 
