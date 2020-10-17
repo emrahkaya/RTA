@@ -121,7 +121,7 @@ def execute(command, hide_log=False, mute=False, timeout=30, wait=True, kill=Fal
                 if not (hide_log or mute):
                     print(line.rstrip())
 
-        output += p.stdout.read()
+        #output += p.stdout.read()
         output = output.strip()
 
         # Add artificial sleep to slow down command lines
