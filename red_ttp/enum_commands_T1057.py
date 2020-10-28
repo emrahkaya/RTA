@@ -15,11 +15,12 @@ long_commands = [
 commands = [
     "tasklist",
     "tasklist /svc",
-    "net start",
+    "net start"
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

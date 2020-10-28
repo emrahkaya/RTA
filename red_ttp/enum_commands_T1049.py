@@ -16,15 +16,16 @@ commands = [
     "net use",
     "net session",
     "netstat -nao",
-    "netsh wlan show networks mode = bssid"
+    "netsh wlan show networks mode = bssid",
     "netsh wlan show interfaces",
     "net file",
-    "arp -a"
+    "arp -a",
     "net view"
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

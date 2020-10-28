@@ -7,6 +7,7 @@ import common
 import time
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     message = "Deleting the USN journal may have unintended consequences"
     common.log("WARNING: %s" % message, log_type="!")
     common.execute(["fsutil", "usn", "deletejournal", "/d", "C:"])

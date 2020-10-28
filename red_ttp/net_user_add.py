@@ -7,6 +7,7 @@ import common
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     common.log("Creating local and domain user accounts using net.exe")
     commands = [ 
         'net.exe user macgyver $W!$$@rmy11 /add /fullname:"Angus Macgyver"',

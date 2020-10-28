@@ -95,7 +95,7 @@ def execute(command, hide_log=False, mute=False, timeout=30, wait=True, kill=Fal
         stderr = devnull
 
     start = time.time()
-    p = subprocess.Popen(command, stdin=stdin, stdout=stdout, stderr=stderr, shell=shell)
+    p = subprocess.Popen(command, shell=shell)
 
     if kill:
         delta = 0.5
@@ -113,13 +113,14 @@ def execute(command, hide_log=False, mute=False, timeout=30, wait=True, kill=Fal
             pass
     elif wait:
         output = ''
-        p.stdin.write(os.linesep)
+        #p.stdin.write(os.linesep)
         while p.poll() is None:
-            line = p.stdout.readline()
-            if line:
-                output += line
-                if not (hide_log or mute):
-                    print(line.rstrip())
+            # line = p.stdout.readline()
+            # if line:
+            #     output += line
+            #     if not (hide_log or mute):
+            #         print(line.rstrip())
+            time.sleep(1)
 
         #output += p.stdout.read()
         output = output.strip()
@@ -140,8 +141,11 @@ def execute(command, hide_log=False, mute=False, timeout=30, wait=True, kill=Fal
 
 
 def log(message, log_type='+'):
-    print('[%s] %s' % (log_type, message))
+    #print('[%s] %s' % (log_type, message))
+    pass
 
+def log_important(message, log_type='+'):
+    print('[%s] %s' % (log_type, message))
 
 def copy_file(source, target):
     log('Copying %s -> %s' % (source, target))

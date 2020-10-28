@@ -19,11 +19,12 @@ commands = [
     "net use",
     "net view",
     "net share",
-    "net config workstation",
+    "net config workstation"
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

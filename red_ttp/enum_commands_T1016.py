@@ -17,11 +17,11 @@ commands = [
     "hostname",
     "route print",
     "arp -a"
-
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

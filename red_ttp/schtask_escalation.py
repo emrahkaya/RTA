@@ -12,6 +12,7 @@ def schtasks(*args, **kwargs):
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     common.log("Scheduled Task Privilege Escalation")
 
     task_name = 'test-task-rta'

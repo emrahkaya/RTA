@@ -18,6 +18,7 @@ def run_dll(dll, entry_point):
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     common.log("RunDLL32 with Ordinals")
     run_dll("dsquery.dll", "#258")
     dat_file = os.path.abspath("dsquery.dat")

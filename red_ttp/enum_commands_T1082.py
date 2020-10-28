@@ -13,18 +13,20 @@ long_commands = [
 ]
 
 commands = [
-    "ver",
-    "dir /s C:",
+    "wmic os get /value",
+    "cmd /c ver",
+    "cmd /c dir /s C:",
     "net config workstation",
     "whoami",
     "hostname",
-    "set",
-    "date /t",
+    "cmd /c set",
+    "cmd /c date /t",
     "net start"
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

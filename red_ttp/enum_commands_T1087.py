@@ -16,7 +16,7 @@ commands = [
     "net localgroup administrators",
     "net user",
     "net user administrator",
-    "net user /domain"
+    "net user /domain",
     "net group",
     "net group \"Domain Admins\" /domain",
     "net group \"Exchange Trusted Subsystem\" /domain"
@@ -24,6 +24,7 @@ commands = [
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,

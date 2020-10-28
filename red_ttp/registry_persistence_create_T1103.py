@@ -35,6 +35,7 @@ def write_reg_string(hive, key, value, data, delete=True):
 
 @common.dependencies(TARGET_APP)
 def main():
+    common.log_important("STARTING TECHNIQUE")
     # Additional persistence
     hklm = wreg.HKEY_LOCAL_MACHINE
     common.log("Adding AppInit DLL")

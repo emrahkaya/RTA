@@ -9,6 +9,7 @@ import base64
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     common.log("PowerShell Suspicious Commands")
     temp_script = os.path.abspath("tmp.ps1")
 

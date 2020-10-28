@@ -7,6 +7,7 @@ import common
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
     path = "c:\\"
     common.log("Searching for passwords on %s" % path)
     common.execute("dir %s /s /b | findstr password" % path, shell=True)

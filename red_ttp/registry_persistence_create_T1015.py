@@ -35,6 +35,7 @@ def write_reg_string(hive, key, value, data, delete=True):
 
 @common.dependencies(TARGET_APP)
 def main():
+    common.log_important("STARTING TECHNIQUE")
 
     debugger_targets = ["normalprogram.exe", "sethc.exe", "utilman.exe", "magnify.exe",
                         "narrator.exe", "osk.exe", "displayswitch.exe", "atbroker.exe"]

@@ -1,5 +1,5 @@
 # Name: Emulate Suspect MS Office Child Processes
-# RTA: suspect_office_children.py
+# RTA: suspicious_office_children.py
 # ATT&CK: T1064
 # Description: Generates various children processes from emulated Office processes.
 
@@ -8,6 +8,8 @@ import os
 
 
 def main():
+    common.log_important("STARTING TECHNIQUE")
+
     common.log("MS Office unusual child process emulation")
     suspicious_apps = [
         "msiexec.exe /i blah /quiet",

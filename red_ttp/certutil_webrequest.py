@@ -10,6 +10,7 @@ MY_DLL = common.get_path("bin", "mydll.dll")
 
 @common.dependencies(MY_DLL)
 def main():
+    common.log_important("STARTING TECHNIQUE")
     # http server will terminate on main thread exit
     # if daemon is True
     server, ip, port = common.serve_web()

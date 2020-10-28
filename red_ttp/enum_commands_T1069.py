@@ -17,11 +17,12 @@ commands = [
     "net localgroup",
     "net group",
     "net group \"Domain Admins\" /domain",
-   "net accounts",
+   "net accounts"
 ] + long_commands
 
 
 def main(args=None):
+    common.log_important("STARTING TECHNIQUE")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sample', dest="sample", default=len(commands), type=int,
